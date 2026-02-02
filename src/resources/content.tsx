@@ -1,21 +1,21 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import type { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Cyndi",
+  lastName: "Kendi",
+  name: "Cyndi Kendi",
+  role: "Data Analyst & Game Developer ",
+  avatar: "/images/profile.jpg",
+  email: "cyndikendi@gmail.com",
+  location: "Africa/Nairobi", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Kiswahili"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
   display: true,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  description: <>My weekly newsletter about creativity, engineering and women in tech</>,
 };
 
 const social: Social = [
@@ -25,26 +25,26 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/cyndikendi",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/cyndi-kendi-4236a6295/",
     essential: true,
   },
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
+    link: "https://www.instagram.com/kendicyndi/?hl=en",
     essential: false,
   },
   {
     name: "Threads",
     icon: "threads",
     link: "https://www.threads.com/@once_ui",
-    essential: true,
+    essential: false,
   },
   {
     name: "Email",
@@ -60,9 +60,9 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <> Creating immersive digital experiences</>,
   featured: {
-    display: true,
+    display: false,
     title: (
       <Row gap="12" vertical="center">
         <strong className="ml-4">Once UI</strong>{" "}
@@ -76,7 +76,9 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    I'm Cyndi, a computer science student at <Text as="span" size="xl" weight="strong">Pwani University.</Text><br /> 
+    I specialize in data analysis using tools like <Text as="span" size="xl" weight="strong">Excel, SQL, Python,</Text> and <Text as="span" size="xl" weight="strong">Tableau.</Text> 
+    Additionally, I have a passion for game development with <Text as="span" size="xl" weight="strong">Unity</Text> and <Text as="span" size="xl" weight="strong">C#.</Text>
 </>
   ),
 };
@@ -94,7 +96,7 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -102,14 +104,15 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Cyndi is a Nairobi-based data analyst and game developer passionate about transforming data into actionable insights and creating immersive gaming experiences. 
+        With a strong foundation in data analytics tools such as Excel, SQL, Python, and Tableau, she excels at cleaning, analyzing, and visualizing data to help organizations make informed decisions. 
+        In addition to her analytical skills, Cyndi is also proficient in game development using Unity and C#, allowing her to design and develop engaging interactive experiences. 
+        She is committed to continuous learning and growth in both fields, aiming to leverage her skills to drive innovation and creativity.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: false, // set to false to hide this section
     title: "Work Experience",
     experiences: [
       {
@@ -117,14 +120,8 @@ const about: About = {
         timeframe: "2022 - Present",
         role: "Senior Design Engineer",
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
+          "Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.",
+          "Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.",
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
@@ -141,14 +138,8 @@ const about: About = {
         timeframe: "2018 - 2022",
         role: "Lead Designer",
         achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
+          "Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.",
+          "Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.",
         ],
         images: [],
       },
@@ -159,12 +150,16 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Pwani University",
+        description: <>Studying BSc Computer Science.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Orbal Digital Academy",
+        description: <>Studied Data Analytics using  Excel.</>,
+      },
+      {
+        name: "DataCamp",
+        description: <>Studying Data Analytics using SQL, Python and Tableau.</>,
       },
     ],
   },
@@ -173,26 +168,31 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Data Analysis",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Proficient in cleaning data, analyzing, visualizing and deducing insights using Excel, Python, SQL and Tableau.</>
         ),
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
+            name: "SQL",
+            icon: "sql",
+          },
+          {
+            name: "Tableau",
+            icon: "tableau",
+          },
+          { name: "Python",
+            icon: "python",
+          },
+          {
+            name: "Excel",
+            icon: "excel",
           },
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
+            src: "/images/projects/project-01/ExcelShot.png",
             alt: "Project image",
             width: 16,
             height: 9,
@@ -200,28 +200,24 @@ const about: About = {
         ],
       },
       {
-        title: "Next.js",
+        title: "Unity Game Development",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Developing interactive games using Unity and C#.</>
         ),
         tags: [
           {
-            name: "JavaScript",
-            icon: "javascript",
+            name: "Unity",
+            icon: "unity",
           },
           {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
+            name: "C#",
+            icon: "csharp",
           },
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
+            src: "/images/projects/project-01/UnityShot.png",
             alt: "Project image",
             width: 16,
             height: 9,
